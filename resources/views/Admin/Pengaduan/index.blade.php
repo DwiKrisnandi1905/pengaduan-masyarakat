@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+@section('title', 'Halaman Pengaduan')
+
 @section('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 @endsection

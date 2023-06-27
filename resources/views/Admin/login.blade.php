@@ -9,7 +9,7 @@
 
         <style>
             body {
-                background: #6a70fc;
+                background: url(../images/poliness.jpg);
             }
 
             .btn-purple {
@@ -20,17 +20,17 @@
 
         </style>
 
-    <title>Halaman Masuk Petugas</title>
+    <title>Halaman Masuk Admin</title>
 </head>
 <body>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-5">
-            <h2 class="text-center text-white mb-0 mt-5">PEKAT</h2>
-            <P class="text-center text-white mb-5">Pengaduan Masyarakat</P>
+            <h2 class="text-center text-white mb-0 mt-5">PEKAT POLINES</h2>
+            <P class="text-center text-white mb-5">Pengaduan Masyarakat POLINES</P>
             <div class="card mt-5">
                 <div class="card-body">
-                    <h2 class="text-center mb-5">FORM PETUGAS</h2>
+                    <h2 class="text-center mb-5">FORM Admin</h2>
                     <form action="{{ route('admin.login') }}" method="POST">
                         @csrf
                         <div class="form-group">

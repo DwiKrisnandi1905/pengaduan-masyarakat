@@ -10,7 +10,7 @@
 {{-- Section Header --}}
 <section class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-    <img src="images/polines.png" width="90px">
+        <img src="images/polines.png" width="90px">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <h4 class="semi-bold mb-0 text-white">PEKAT POLINES</h4>
@@ -35,16 +35,10 @@
                     @else
                     <ul class="navbar-nav text-center ml-auto">
                         <li class="nav-item">
-                            <button class="btn text-white" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#loginModal">Masuk</button>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('pekat.formRegister') }}" class="btn btn-outline-purple">Registrasi Mahasiswa</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('admin.formLogin') }}" class="btn btn-outline-purple">Masuk Admin</a>
-                        </li>
+                            <a href="" class="btn btn-info text-white mt-3" data-toggle="modal"
+                                data-target="#loginModal">Masuk</a>
+                            <a href="{{ route('pekat.formRegister') }}" class="btn btn-info text-white mt-3">Registrasi Mahasiswa</a>
+                            <a href="{{ route('admin.formLogin') }}" class="btn btn-info text-white mt-3">Admin Login</a>
                     </ul>
                     @endauth
                 </div>
@@ -52,8 +46,8 @@
         </div>
     </nav>
     <div class="text-center">
-        <h2 class="medium text-white mt-3">Layanan Pengaduan Masyarakat POLINES</h2>
-        <p class="italic text-white mb-5">Sampaikan laporan Anda langsung kepada pihak POLINES</p>
+        <h2 class="semi-bold text-white mt-3">Layanan Pengaduan Masyarakat POLINES</h2>
+        <p class="semi-bold text-white mb-5">Sampaikan laporan Anda langsung kepada pihak POLINES</p>
     </div>
 
     <div class="wave wave1"></div>
@@ -75,16 +69,12 @@
             @if (Session::has('pengaduan'))
                 <div class="alert alert-{{ Session::get('type') }}">{{ Session::get('pengaduan') }}</div>
             @endif
-
             <div class="card mb-3">Tulis Laporan Disini</div>
             <form action="{{ route('pekat.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <textarea name="isi_laporan" placeholder="Masukkan Isi Laporan" class="form-control"
                         rows="4">{{ old('isi_laporan') }}</textarea>
-                </div>
-                <div class="form-group">
-                    <input type="file" name="foto" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-custom mt-2">Kirim</button>
             </form>
@@ -94,9 +84,11 @@
 {{-- Section Hitung Pengaduan --}}
 <div class="pengaduan mt-5">
     <div class="bg-purple">
-        <div class="text-center">
-            <h5 class="medium text-white mt-3">JUMLAH LAPORAN SEKARANG</h5>
-            <h2 class="medium text-white">10</h2>
+        <div class="text-left">
+            <h5 class="medium text-white mt-3">KATEGORI PENGADUAN</h5>
+            <h2 class="medium text-white">1. Fasilitas</h2>
+            <h2 class="medium text-white">2. Kebersihan</h2>
+            <h2 class="medium text-white">3. Sarana dan Prasarana</h2>
         </div>
     </div>
 </div>

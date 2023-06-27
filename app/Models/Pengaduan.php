@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengaduan extends Model
 {
+    
     use HasFactory;
 
     protected $table = 'pengaduan';
@@ -26,5 +27,9 @@ class Pengaduan extends Model
     public function user()
     {
         return $this->hasOne(Masyarakat::class, 'nik', 'nik');
+    }
+    public function getId()
+    {
+        return $this->attributes['id_pengaduan'];
     }
 }

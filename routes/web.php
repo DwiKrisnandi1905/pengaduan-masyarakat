@@ -25,6 +25,7 @@ Route::get('/', [UserController::class, 'index'])->name('pekat.index');
 
 Route::middleware(['isMasyarakat'])->group(function () {
     Route::post('/store', [UserController::class, 'storePengaduan'])->name('pekat.store');
+    Route::delete('/laporan/{siapa?}/delete', [PengaduanController::class, 'delete'])->name("pekat.delete");
     Route::get('/laporan/{siapa?}', [UserController::class, 'laporan'])->name('pekat.laporan');
     Route::get('/logout', [UserController::class, 'logout'])->name('pekat.logout');
 }); 
@@ -51,6 +52,7 @@ Route::prefix('admin')->group(function (){
         Route::get('laporan', [LaporanController::class, 'index'])->name('laporan.index');
         Route::post('getLaporan', [LaporanController::class, 'getLaporan'])->name('laporan.getLaporan');
         Route::get('laporan/cetak/{from}/{to}', [LaporanController::class, 'cetakLaporan'])->name('laporan.cetakLaporan');
+        Route::get('/logout', [AdminController::class, 'logout'])->name('pekat.logout');
     });
 
     Route::middleware(['isPetugas'])->group(function () {

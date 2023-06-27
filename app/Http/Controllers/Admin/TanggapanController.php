@@ -40,6 +40,6 @@ class TanggapanController extends Controller
 
             return redirect()->route('pengaduan.show', ['pengaduan' => $pengaduan, 'tanggapan' => $tanggapan])->with(['status' => 'Berhasil Dikirim!']);
         }
-        
     }
 }
+

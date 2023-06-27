@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="text-center">
-        <h5>Laporan Pengaduan Masyarakat</h5>
+        <h5>Laporan Pengaduan Masyarakat POLINES</h5>
         <h6>No 123</h6>
     </div>
     <div class="container">

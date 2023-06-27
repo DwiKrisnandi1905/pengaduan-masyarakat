@@ -3,7 +3,7 @@
 @section('css')
 <style>
     body {
-        background: #6a70fc;
+        background: url(../images/polines1.jpg);
     }
 
     .btn-purple {

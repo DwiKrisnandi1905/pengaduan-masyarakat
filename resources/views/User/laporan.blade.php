@@ -14,8 +14,8 @@
         <div class="container">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ route('pekat.index') }}">
-                    <h4 class="semi-bold mb-0 text-white">PEKAT</h4>
-                    <p class="italic mt-0 text-white">Pengaduan Masyarakat</p>
+                    <h4 class="semi-bold mb-0 text-white">PEKAT POLINES</h4>
+                    <p class="italic mt-0 text-white">Pengaduan Masyarakat POLINES</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,9 +68,6 @@
                     <div class="form-group">
                         <textarea name="isi_laporan" placeholder="Masukkan Isi Laporan" class="form-control"
                             rows="4">{{ old('isi_laporan') }}</textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="file" name="foto" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-custom mt-2">Kirim</button>
                 </form>
@@ -146,9 +143,13 @@
                 <p>{{ $v->isi_laporan }}</p>
             </div>
             <div class="laporan-bottom">
-                @if ($v->foto != null)
-                <img src="{{ Storage::url($v->foto) }}" alt="{{ 'Gambar '.$v->judul_laporan }}" class="gambar-lampiran">
-                @endif
+                <form action="{{ route('pekat.delete', $v->getId())}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger">
+                                <i class="bi-trash">Hapus</i>
+                            </button>
+                        </form>
                 @if ($v->tanggapan != null)
                 <p class="mt-3 mb-1">{{ '*Tanggapan dari '. $v->tanggapan->petugas->nama_petugas }}</p>
                 <p class="light">{{ $v->tanggapan->tanggapan }}</p>

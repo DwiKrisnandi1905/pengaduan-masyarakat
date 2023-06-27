@@ -35,8 +35,8 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3 class="mb-0">PEKAT</h3>
-                <p class="text-white mb-0">Pengaduan Masyarakat</p>
+                <h3 class="mb-0">PEKAT POLINES</h3>
+                <p class="text-white mb-0">Pengaduan Masyarakat POLINES</p>
             </div>
 
             <ul class="list-unstyled components">
@@ -50,14 +50,13 @@
                     <a href="{{ route('petugas.index') }}">Petugas</a>
                 </li>
                 <li class="{{ Request::is('admin/masyarakat') ? 'active' : '' }}">
-                    <a href="{{ route('masyarakat.index') }}">Masyarakat</a>
+                    <a href="{{ route('masyarakat.index') }}">Mahasiswa</a>
                 </li>
                 <li class="{{ Request::is('admin/laporan') ? 'active' : '' }}">
                     <a href="{{ route('laporan.index') }}">Laporan</a>
                 </li>
             </ul>
         </nav>
-
 
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
