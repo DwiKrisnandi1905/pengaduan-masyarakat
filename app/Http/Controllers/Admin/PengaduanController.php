@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PengaduanController extends Controller
 {

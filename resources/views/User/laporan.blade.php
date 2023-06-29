@@ -143,13 +143,15 @@
                 <p>{{ $v->isi_laporan }}</p>
             </div>
             <div class="laporan-bottom">
-                <form action="{{ route('pekat.delete', $v->getId())}}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger">
-                                <i class="bi-trash">Hapus</i>
-                            </button>
-                        </form>
+            @if ($siapa == 'me' && $v->status != 'proses' && $v->status != 'selesai')
+            <form action="{{ route('pekat.delete', $v->getId())}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger">
+                    <i class="bi-trash">Hapus</i>
+                </button>
+            </form>
+            @endif
                 @if ($v->tanggapan != null)
                 <p class="mt-3 mb-1">{{ '*Tanggapan dari '. $v->tanggapan->petugas->nama_petugas }}</p>
                 <p class="light">{{ $v->tanggapan->tanggapan }}</p>
@@ -158,6 +160,7 @@
             <hr>
         </div>
         @endforeach
+       
     </div>
 </div>
 {{-- Footer --}}

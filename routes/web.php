@@ -28,7 +28,7 @@ Route::middleware(['isMasyarakat'])->group(function () {
     Route::delete('/laporan/{siapa?}/delete', [PengaduanController::class, 'delete'])->name("pekat.delete");
     Route::get('/laporan/{siapa?}', [UserController::class, 'laporan'])->name('pekat.laporan');
     Route::get('/logout', [UserController::class, 'logout'])->name('pekat.logout');
-}); 
+});    
 
 Route::middleware(['guest'])->group(function () {
     // Login
