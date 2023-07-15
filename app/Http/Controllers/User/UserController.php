@@ -109,6 +109,7 @@ class UserController extends Controller
             'isi_laporan' => $data['isi_laporan'],
             'foto' => $data['foto'] ?? '',
             'status' => '0',
+            'anonym' => $request->anonym,
         ]);
 
         if ($pengaduan) {

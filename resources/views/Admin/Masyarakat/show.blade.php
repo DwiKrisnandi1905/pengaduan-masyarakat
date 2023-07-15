@@ -37,7 +37,7 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <th>NIK</th>
+                                <th>NIM</th>
                                 <td>:</td>
                                 <td>{{ $masyarakat->nik }}</td>
                             </tr>

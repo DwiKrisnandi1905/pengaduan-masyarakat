@@ -20,6 +20,7 @@ class Pengaduan extends Model
         'isi_laporan',
         'foto',
         'status',
+        'anonym',
     ];
 
     protected $casts = ['tgl_pengaduan'=>'datetime'];

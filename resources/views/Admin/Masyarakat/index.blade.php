@@ -13,7 +13,7 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>NIK</th>
+                <th>NIM</th>
                 <th>Nama</th>
                 <th>Username</th>
                 <th>Telp</th>

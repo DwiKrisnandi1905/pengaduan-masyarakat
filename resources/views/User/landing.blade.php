@@ -45,16 +45,23 @@
             </div>
         </div>
     </nav>
+    <div class="container">
     <div class="text-center">
-        <h2 class="semi-bold text-white mt-3">Layanan Pengaduan Masyarakat POLINES</h2>
-        <p class="semi-bold text-white mb-5">Sampaikan laporan Anda langsung kepada pihak POLINES</p>
+        <div class="card1">
+            <div class="card-body1">
+                <h2 class="semi-bold text-white mt-3">Layanan Pengaduan Masyarakat POLINES</h2>
+                <p class="semi-bold text-white mb-5">Sampaikan laporan Anda langsung kepada pihak POLINES</p>
+            </div>
+        </div>
     </div>
-
+</div>
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
     <div class="wave wave4"></div>
 </section>
+@if(Auth::guard('masyarakat')->check())
+
 {{-- Section Card Pengaduan --}}
 <div class="row justify-content-center">
     <div class="col-lg-6 col-10 col">
@@ -81,6 +88,8 @@
         </div>
     </div>
 </div>
+@endif
+
 {{-- Section Hitung Pengaduan --}}
 <div class="pengaduan mt-5">
     <div class="bg-purple">

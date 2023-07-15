@@ -46,8 +46,5 @@
                 </div>
             </div>
         </div>
-        <div class="text-center" style="width: 100%">
-            <a href="{{ route('admin.logout') }}" class="btn btn-danger text-white mt-3">LOGOUT</a>
-        </div>
     </div>
 @endsection

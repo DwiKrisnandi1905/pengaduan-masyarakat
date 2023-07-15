@@ -69,6 +69,10 @@
                         <textarea name="isi_laporan" placeholder="Masukkan Isi Laporan" class="form-control"
                             rows="4">{{ old('isi_laporan') }}</textarea>
                     </div>
+  <div class="mb-3 form-check">
+    <input name = "anonym" value="1" type="checkbox" class="form-check-input" id="anonym">
+    <label class="form-check-label" for="anonym">Anonymous</label>
+  </div>
                     <button type="submit" class="btn btn-custom mt-2">Kirim</button>
                 </form>
             </div>
@@ -122,7 +126,11 @@
                 <img src="{{ asset('images/user_default.svg') }}" alt="profile" class="profile">
                 <div class="d-flex justify-content-between">
                     <div>
+                        @if ($v->anonym == '1')
+                        <p>Anonymous</p>
+                        @else
                         <p>{{ $v->user->nama }}</p>
+                        @endif
                         @if ($v->status == '0')
                         <p class="text-danger">Pending</p>
                         @elseif($v->status == 'proses')
