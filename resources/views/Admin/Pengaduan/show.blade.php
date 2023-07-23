@@ -49,11 +49,6 @@
                                 <td>{{ $pengaduan->tgl_pengaduan }}</td>
                             </tr>
                             <tr>
-                                <th>Foto</th>
-                                <td>:</td>
-                                <td><img src="{{ Storage::url($pengaduan->Foto) }}" alt="Foto Pengaduan" class="embed-responsive"></td>
-                            </tr>
-                            <tr>
                                 <th>Isi Laporan</th>
                                 <td>:</td>
                                 <td>{{ $pengaduan->isi_laporan }}</td>

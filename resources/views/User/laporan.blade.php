@@ -51,7 +51,7 @@
 </section>
 {{-- Section Card --}}
 <div class="container">
-    <div class="row justify-content-between">
+    <div class="row justify-content-between move-up2">
         <div class="col-lg-8 col-md-12 col-sm-12 col-12 col">
             <div class="content content-top shadow">
                 @if ($errors->any())

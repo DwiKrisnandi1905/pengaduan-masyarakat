@@ -63,7 +63,7 @@
 @if(Auth::guard('masyarakat')->check())
 
 {{-- Section Card Pengaduan --}}
-<div class="row justify-content-center">
+<div class="row justify-content-center move-up">
     <div class="col-lg-6 col-10 col">
         <div class="content shadow">
 
@@ -90,7 +90,7 @@
 </div>
 @endif
 
-{{-- Section Hitung Pengaduan --}}
+{{-- Kategori Pengaduan --}}
 <div class="pengaduan mt-5">
     <div class="bg-purple">
         <div class="text-left">
@@ -101,6 +101,7 @@
         </div>
     </div>
 </div>
+
 {{-- Footer --}}
 <div class="mt-5">
     <hr>

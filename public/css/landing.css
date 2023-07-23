@@ -3,7 +3,7 @@
 .header {
     position: relative;
     width: 100%;
-    height: 430px;
+    height: 600px;
     background: url(../images/poliness.jpg);
     overflow: hidden;
 }
@@ -261,6 +261,11 @@ body {
     .card-body1 {
         text-align: center;
     }
+
+    .move-up {
+        margin-top: -160px; /* Adjust the value as needed */
+    }
+    
     
   
     
