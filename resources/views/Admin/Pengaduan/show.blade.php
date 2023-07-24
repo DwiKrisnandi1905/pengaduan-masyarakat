@@ -37,7 +37,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="text-center">
-                        Pengaduan Masyarakat
+                        Pengaduan Mahasiswa
                     </div>
                 </div>
                 <div class="card-body">

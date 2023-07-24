@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Detail Masyarakat')
+@section('title', 'Detail Mahasiswa')
 
 @section('css')
     <style>
@@ -19,9 +19,9 @@
 @endsection
 
 @section('header')
-    <a href="{{ route('masyarakat.index') }}" class="text-primary">Data Masyarakat</a>
+    <a href="{{ route('masyarakat.index') }}" class="text-primary">Data Mahasiswa</a>
     <a href="#" class="text-grey">/</a>
-    <a href="#" class="text-grey">Detail Masyarakat</a>
+    <a href="#" class="text-grey">Detail Mahasiswa</a>
 @endsection
 
 @section('content')
@@ -30,7 +30,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="text-center">
-                        Detail Masyarakat
+                        Detail Mahasiswa
                     </div>
                 </div>
                 <div class="card-body">
